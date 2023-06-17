@@ -134,9 +134,9 @@ const Products = () => {
           )}
         </Box>
       ) : (
-        <>
+        <Box mt="40px">
           <LinearProgress color="inherit" />
-        </>
+        </Box>
       )}
     </Box>
   );
