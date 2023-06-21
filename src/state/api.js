@@ -5,7 +5,14 @@ export const api = createApi({
     baseUrl: "http://localhost:5001",
   }),
   reducerPath: "adminApi",
-  tagTypes: ["User", "Products", "Customers", "Transactions"],
+  tagTypes: [
+    "User",
+    "Products",
+    "Customers",
+    "Transactions",
+    "Geography",
+    "OverallStat",
+  ],
   endpoints: (build) => ({
     getUser: build.query({
       query: (id) => `general/user/${id}`,
@@ -27,6 +34,14 @@ export const api = createApi({
       }),
       providesTags: ["Transactions"],
     }),
+    getGeography: build.query({
+      query: () => "client/geography",
+      providesTags: ["Geography"],
+    }),
+    getSales: build.query({
+      query: () => "sales/overallstat",
+      providesTags: ["OverallStat"],
+    }),
   }),
 });
 
@@ -35,4 +50,6 @@ export const {
   useGetProductsQuery,
   useGetCustomersQuery,
   useGetTransactionsQuery,
+  useGetGeographyQuery,
+  useGetSalesQuery,
 } = api;
