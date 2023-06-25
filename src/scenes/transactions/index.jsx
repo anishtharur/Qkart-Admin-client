@@ -99,11 +99,9 @@ const Transactions = () => {
             sortingMode="server"
             onPageChange={(newPage) => {
               setPage(newPage);
-              console.log(newPage, page);
             }}
             onPageSizeChange={(newPageSize) => {
               setPageSize(newPageSize);
-              console.log(newPageSize, pageSize);
             }}
             onSortModelChange={(newSortModel) => setSort(...newSortModel)}
             components={{ Toolbar: DataGridCustomToolbar }}
