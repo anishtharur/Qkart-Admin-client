@@ -7,7 +7,6 @@ import { useGetSalesQuery } from "state/api";
 const Monthly = () => {
   const { data } = useGetSalesQuery();
   const theme = useTheme();
-  console.log(data);
   const [formattedData] = useMemo(() => {
     if (!data) return [];
 
