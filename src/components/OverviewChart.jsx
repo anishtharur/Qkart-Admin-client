@@ -101,6 +101,8 @@ function OverviewChart({ isDashboard = false, view }) {
       }}
       yFormat=" >-.2f"
       curve="catmullRom"
+      enableGridY={isDashboard ? false : true}
+      enableArea={isDashboard ? true : false}
       axisTop={null}
       axisRight={null}
       axisBottom={{
@@ -117,6 +119,7 @@ function OverviewChart({ isDashboard = false, view }) {
       }}
       axisLeft={{
         tickSize: 5,
+        tickValues: 5,
         tickPadding: 5,
         tickRotation: 0,
         legend: isDashboard
